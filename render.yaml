@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: cargourl-ai
+    env: python
+    plan: free
+    buildCommand: pip install flask prophet scikit-learn pandas requests
+    startCommand: python app.py
