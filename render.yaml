@@ -3,5 +3,6 @@ services:
     name: cargourl-ai
     env: python
     plan: free
+    rootDir: src
     buildCommand: pip install flask prophet scikit-learn pandas requests
     startCommand: python app.py
