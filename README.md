@@ -4,9 +4,13 @@ A Flask REST API that analyzes URL click data to surface content optimization
 signals — including predicted high-engagement posting windows, audience
 segmentation, and click-through rate metrics.
 
-Built as the analytics and AI backend for CargoURL, a link management project.
+Built as the analytics and AI backend for [CargoURL](https://cargourl.com), a link
+management platform. The frontend currently displays AI features as previews using
+mock data while the full API integration is in progress.
 
-> **Status:** Work in progress. Core endpoints are functional; see [Roadmap](#roadmap) for planned improvements.
+> **Status:** Work in progress. The API is functional and deployed; AI features on
+> cargourl.com are shown as previews with mock data pending full frontend integration.
+> See [Roadmap](#roadmap) for planned work.
 
 ---
 
@@ -66,7 +70,6 @@ pip install -r requirements.txt
 | Variable | Required | Description |
 |---|---|---|
 | `FLASK_API_KEY` | Yes | API key for authenticating POST requests |
-| `TWITTER_API_KEY` | No | Bearer token for Twitter Trends (optional feature) |
 | `PORT` | No | Port to bind (default: `5000`) |
 
 Create a `.env` file in `src/` or export these variables in your shell before running.
@@ -188,6 +191,7 @@ and `python app.py` as the start command.
 
 ## Roadmap
 
+- [ ] Connect frontend to live API endpoints (replace mock data with real responses)
 - [ ] Add input validation and structured error responses
 - [ ] Add unit tests for the `/optimize` endpoint
 - [ ] Switch production start command to `gunicorn`
