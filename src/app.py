@@ -13,7 +13,8 @@ def home():
 @app.route('/optimize', methods=['POST'])
 def optimize():
     # API Key Check
-    if request.headers.get('X-API-Key') != os.getenv('FLASK_API_KEY'):
+    api_key = os.getenv('FLASK_API_KEY')
+    if not api_key or request.headers.get('X-API-Key') != api_key:
         return jsonify({'error': 'Unauthorized'}), 401
         
     try:
