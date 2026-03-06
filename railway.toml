@@ -3,4 +3,4 @@ builder = "NIXPACKS"
 
 [deploy]
 buildCommand = "cd src && pip install --only-binary=all -r requirements.txt"
-startCommand = "cd src && python app.py"
+startCommand = "cd src && gunicorn app:app"

@@ -202,7 +202,6 @@ and `python app.py` as the start command.
 ### v1.2 — Reliability & Quality
 - [ ] Add input validation and structured error responses
 - [ ] Add unit tests for the `/optimize` endpoint
-- [ ] Switch production start command to `gunicorn`
 - [ ] Add a CI workflow (GitHub Actions)
 
 ### v1.3 — Integrations
