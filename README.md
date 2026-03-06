@@ -191,12 +191,23 @@ and `python app.py` as the start command.
 
 ## Roadmap
 
-- [ ] Connect frontend to live API endpoints (replace mock data with real responses)
-- [ ] LinkedIn Share API integration for posting and retrieving post-level analytics
+### v1.1 — Supabase Integration
+- [ ] Identify click data table and column names in Supabase
+- [ ] Add `supabase-py` and `flask-cors` to dependencies
+- [ ] Add `SUPABASE_URL` and `SUPABASE_KEY` environment variables
+- [ ] Update `/optimize` to accept a `link_id` and fetch click data directly from Supabase
+- [ ] Enable CORS so the frontend can call the API from the browser
+- [ ] Connect frontend to live `/optimize` endpoint (replace mock data with real responses)
+
+### v1.2 — Reliability & Quality
 - [ ] Add input validation and structured error responses
 - [ ] Add unit tests for the `/optimize` endpoint
 - [ ] Switch production start command to `gunicorn`
 - [ ] Add a CI workflow (GitHub Actions)
+
+### v1.3 — Integrations
+- [ ] LinkedIn Share API integration for posting and retrieving post-level analytics
+- [ ] Description generation via trending topic keywords
 
 ---
 
