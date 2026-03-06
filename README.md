@@ -201,7 +201,6 @@ and `python app.py` as the start command.
 
 ### v1.2 — Reliability & Quality
 - [ ] Add input validation and structured error responses
-- [ ] Add a CI workflow (GitHub Actions)
 
 ### v1.3 — Integrations
 - [ ] LinkedIn Share API integration for posting and retrieving post-level analytics
