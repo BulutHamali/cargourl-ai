@@ -192,6 +192,7 @@ and `python app.py` as the start command.
 ## Roadmap
 
 - [ ] Connect frontend to live API endpoints (replace mock data with real responses)
+- [ ] LinkedIn Share API integration for posting and retrieving post-level analytics
 - [ ] Add input validation and structured error responses
 - [ ] Add unit tests for the `/optimize` endpoint
 - [ ] Switch production start command to `gunicorn`
