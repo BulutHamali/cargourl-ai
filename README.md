@@ -137,12 +137,17 @@ defaults; with 3 or more records the ML models produce data-driven outputs.
 
 ```json
 {
-  "optimalTime": "07 PM weekdays",
+  "optimalTime": "Saturday 07 PM",
   "targetAudience": "US Instagram users",
-  "description": "Discover our #ProductLaunch with #AI deals!",
-  "ctrImprovement": "4.50% higher than manual posting"
+  "description": null,
+  "ctr": 4.5,
+  "ctrDelta": 2.5,
+  "baselineCtr": 2.0
 }
 ```
+
+Fields are `null` when there is insufficient data to produce a meaningful result.
+`ctrDelta` is the difference between the computed CTR and `baselineCtr` (percentage points).
 
 **Status Codes**
 
@@ -172,19 +177,17 @@ and `python app.py` as the start command.
 
 ## Known Limitations
 
-- The Twitter Trends integration targets the v2 API; response parsing is not fully
-  aligned with the v2 schema and is pending a fix.
 - KMeans audience segmentation requires at least 3 data points; below that threshold
-  a default label is returned.
-- The CTR improvement figure is relative to a hardcoded baseline and should be treated
-  as indicative rather than precise.
+  `targetAudience` returns `null`.
+- All fields return `null` when the corresponding input columns are absent — no default
+  values are fabricated.
+- Description generation is not yet implemented; the field is reserved for a planned
+  trend-keyword integration.
 
 ---
 
 ## Roadmap
 
-- [ ] Fix Twitter API v2 response parsing
-- [ ] Make CTR baseline a configurable request parameter
 - [ ] Add input validation and structured error responses
 - [ ] Add unit tests for the `/optimize` endpoint
 - [ ] Switch production start command to `gunicorn`
